@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mess Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Mess Management</h1>
+        <div class="options">
+            <button onclick="openPage('deposit')">Deposit</button>
+            <button onclick="openPage('meal')">Meal</button>
+            <button onclick="openPage('bazar')">Bazar</button>
+            <button onclick="openPage('status')">Status</button>
+        </div>
+
+        <div id="deposit" class="page">
+            <h2>Deposit</h2>
+            <div class="person" id="person1">
+                <button onclick="openDepositDetails('person1')">Person 1</button>
+                <div class="details" id="person1-details"></div>
+            </div>
+            <div class="person" id="person2">
+                <button onclick="openDepositDetails('person2')">Person 2</button>
+                <div class="details" id="person2-details"></div>
+            </div>
+            <div class="person" id="person3">
+                <button onclick="openDepositDetails('person3')">Person 3</button>
+                <div class="details" id="person3-details"></div>
+            </div>
+            <div class="person" id="person4">
+                <button onclick="openDepositDetails('person4')">Person 4</button>
+                <div class="details" id="person4-details"></div>
+            </div>
+        </div>
+
+        <div id="meal" class="page">
+            <h2>Meal</h2>
+            <div class="person" id="meal-person1">
+                <button onclick="openMealDetails('meal-person1')">Person 1</button>
+                <div class="details" id="meal-person1-details"></div>
+            </div>
+            <div class="person" id="meal-person2">
+                <button onclick="openMealDetails('meal-person2')">Person 2</button>
+                <div class="details" id="meal-person2-details"></div>
+            </div>
+            <div class="person" id="meal-person3">
+                <button onclick="openMealDetails('meal-person3')">Person 3</button>
+                <div class="details" id="meal-person3-details"></div>
+            </div>
+            <div class="person" id="meal-person4">
+                <button onclick="openMealDetails('meal-person4')">Person 4</button>
+                <div class="details" id="meal-person4-details"></div>
+            </div>
+        </div>
+
+        <div id="bazar" class="page">
+            <h2>Bazar</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="bazar-table-body">
+                    <!-- Rows will be added here dynamically -->
+                </tbody>
+            </table>
+            <button onclick="addBazarRow()">Add Row</button>
+        </div>
+
+        <div id="status" class="page">
+            <h2>Status</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Member</th>
+                        <th>Total Deposit</th>
+                        <th>Total Meal</th>
+                        <th>Total Bazar Expense</th>
+                        <th>Total Meal Rate</th>
+                        <th>Total Expense</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="status-table-body">
+                    <!-- Status rows will be added here dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
